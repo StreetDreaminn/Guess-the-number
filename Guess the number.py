@@ -7,13 +7,13 @@ Created on Fri Dec  4 17:46:23 2020
 
 import random
 
-answer = random.randint(1,10) 
-
-guess = int(input("Guess a number between 1 and 10: "))
+answer = random.randint(1,10)
 
 # print(answer)
 
 guess_turns = 2
+
+guess = int(input("Guess a number between 1 and 10: "))
 
 while guess_turns > 0:
         if guess < answer:
@@ -28,5 +28,8 @@ while guess_turns > 0:
             print("Correct!")
             break
 
-if guess_turns == 0:
+if guess_turns == 0 and guess == answer:
+    print("Correct!")
+
+if guess is not answer:
     print("Guess turns finished! The answer was {}!".format(answer))
